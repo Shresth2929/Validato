@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Validato</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">Validato</div>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Log In</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        <h1>Email Validator</h1>
+        <form>
+          <label for="email">Enter Your Email to Validate:</label>
+          <input type="email" id="email" placeholder="e.g., example@gmail.com" required />
+          <button type="button" id="subBtn">Validate</button>
+        </form>
+
+        <div id="result" class="results">
+          <h2>Results:</h2>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      © 2025 Validato | All rights reserved
+    </footer>
+
+
+    <style>* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #f4f8fb;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header nav {
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  height: 60px;
+}
+
+nav .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #00b894;
+}
+
+ul {
+  display: flex;
+  gap: 25px;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  color: #2d3436;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+ul li a:hover {
+  color: #00b894;
+}
+
+main {
+  flex: 1;
+  padding: 30px 15px;
+}
+
+.container {
+  background: #ffffff;
+  max-width: 600px;
+  margin: auto;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.container h1 {
+  margin-bottom: 20px;
+  color: #2d3436;
+}
+
+form label {
+  font-size: 16px;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 10px;
+  color: #2d3436;
+}
+
+form input {
+  width: 80%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #dfe6e9;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+button {
+  background-color: #00b894;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #019875;
+}
+
+.results {
+  margin-top: 25px;
+  text-align: left;
+  background: #ecf0f1;
+  padding: 20px;
+  border-left: 4px solid #00b894;
+  border-radius: 10px;
+  word-wrap: break-word;
+}
+
+.results h2 {
+  margin-bottom: 10px;
+  color: #2d3436;
+}
+
+.results div::first-letter {
+  text-transform: uppercase;
+}
+
+footer {
+  background-color: #ffffff;
+  text-align: center;
+  color: #636e72;
+  padding: 15px 0;
+  font-size: 14px;
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.05);
+}
+
+@media (max-width: 600px) {
+    .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links li a {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+  
+
+}
+
+    </style>
+
+    <script >
+        console.log("this is my script");
+
+let f = document.getElementById("subBtn");
+f.addEventListener("click", async (e) => {
+  e.preventDefault();
+  console.log("clicked");
+
+  let email = document.getElementById("email").value;
+  let key = "ema_live_lrTHBO7i2BX5kmPhP92uzMM1dHQ1Y06k9xpkHuNw";
+  let url = `https://api.emailvalidation.io/v1/info?apikey=${key}&email=${email}`;
+
+  try {
+    let res = await fetch(url);
+    let result = await res.json();
+
+    let str = "";
+    for (let key of Object.keys(result)) {
+      if (result[key] !== "" && result[key] !== " " && result[key] !== null) {
+        str += `<div><strong>${key}:</strong> ${result[key]}</div>`;
+      }
+    }
+
+    document.getElementById("result").innerHTML = `
+      <h2>Results:</h2>
+      ${str}
+    `;
+  } catch (error) {
+    document.getElementById("result").innerHTML = `
+      <h2>Error</h2>
+      <div style="color:red;">Something went wrong. Please try again later.</div>
+    `;
+    console.error(error);
+  }
+});
+
+    </script>
+  </body>
+</html>

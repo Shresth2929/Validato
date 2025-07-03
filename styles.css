@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: blueviolet;
+    height: 45px;
+}
+ul{
+    display: flex;
+
+}
+ul li{
+    list-style: none;
+    padding: 0 30px;
+    font-size: 20px;
+    cursor: pointer;
+}
+ul li a{
+    text-decoration: none;
+    color: black;
+}
+ul li a:hover{
+    color: rgb(56, 53, 53);
+    height: 10px;
+}
+
+main{
+    min-height: 86vh;
+    padding: 2px;
+}
+
+.container input{
+    width: 250px;
+    height: 20px;
+}
+
+.container{
+    max-width: 80vw;
+    margin: auto;
+    text-align: center;
+    padding:0 10px;
+}
+button{
+    background-color: black;
+    color: white;
+    border: 2px solid  black  ;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 25px;
+    width: 65px;
+    padding: 0 12px;
+    margin: 5px;
+}
+#result div::first-letter{
+    text-transform: uppercase;
+
+}
+input[type='text']{
+    min-width: 23vh;
+    padding: 3px 12px;
+    border: 2px solid black;
+    border-radius: 4px;
+    font-size: 20px;
+}
+.results{
+    border: 1px solid black;
+    padding: 10px;
+    margin-top: 15px;
+    text-align: left;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    background-color: blueviolet;
+    height: 45px;
+    color: black;
+    padding:0 12px;
+
+}
+
+@media only screen and (max-width: 600px){
+   
+    .container{
+        font-size:14px ;
+        padding: 10px;
+
+    }
+    .container input{
+        width: 100%;
+    }
+
+
+    ul{
+        flex-direction: column;
+        gap:10px;
+    }
+    button{
+        width: 100%;
+    }
+}
