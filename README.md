@@ -62,26 +62,32 @@ The website is mobile-friendly and adapts for small screen sizes using CSS media
 
 📌 TODO / Improvements
 
- Add loading spinner during API call
- Display error message for invalid or failed lookups
- Highlight suggested emails if any (did_you_mean)
- Move API key to backend for security
+ - Add loading spinner during API call
+ - Display error message for invalid or failed lookups
+ - Highlight suggested emails if any (did_you_mean)
+ - Move API key to backend for security
+
 
 ---
 
 📝 License
+
 This project is open-source and available under the MIT License.
 
 ---
 
 🤝 Contributing
+
 Pull requests are welcome! If you'd like to contribute, please fork the repository and use a feature branch.
 
 ---
 
 🙋‍♂️ Author
+
 Shresth Veer Singh
+
 📧 shresthveer0408@gmail.com
+
 🔗 https://github.com/Shresth2929
 
 ---
