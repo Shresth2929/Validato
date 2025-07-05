@@ -37,12 +37,19 @@ Validato is a simple and responsive web application that allows users to validat
 ## 📂 Project Structure
 
 📁 Validato/
+
 ├── index.html
+
 ├── styles.css
+
 ├── script.js
+
 ├── Screenshot (2593).png
+
 ├── Screenshot (2594).png
+
 ├── Screenshot (2595).png
+
 └── README.md
 
 
