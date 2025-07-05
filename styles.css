@@ -1,107 +1,153 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-}
-nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background-color: blueviolet;
-    height: 45px;
-}
-ul{
-    display: flex;
-
-}
-ul li{
-    list-style: none;
-    padding: 0 30px;
-    font-size: 20px;
-    cursor: pointer;
-}
-ul li a{
-    text-decoration: none;
-    color: black;
-}
-ul li a:hover{
-    color: rgb(56, 53, 53);
-    height: 10px;
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-main{
-    min-height: 86vh;
-    padding: 2px;
+body {
+  background-color: #f4f8fb;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.container input{
-    width: 250px;
-    height: 20px;
+header nav {
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  height: 60px;
 }
 
-.container{
-    max-width: 80vw;
-    margin: auto;
-    text-align: center;
-    padding:0 10px;
-}
-button{
-    background-color: black;
-    color: white;
-    border: 2px solid  black  ;
-    border-radius: 5px;
-    cursor: pointer;
-    height: 25px;
-    width: 65px;
-    padding: 0 12px;
-    margin: 5px;
-}
-#result div::first-letter{
-    text-transform: uppercase;
-
-}
-input[type='text']{
-    min-width: 23vh;
-    padding: 3px 12px;
-    border: 2px solid black;
-    border-radius: 4px;
-    font-size: 20px;
-}
-.results{
-    border: 1px solid black;
-    padding: 10px;
-    margin-top: 15px;
-    text-align: left;
+nav .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #00b894;
 }
 
-footer{
-    display: flex;
-    align-items: center;
-    justify-content:center;
-    background-color: blueviolet;
-    height: 45px;
-    color: black;
-    padding:0 12px;
-
+ul {
+  display: flex;
+  gap: 25px;
 }
 
-@media only screen and (max-width: 600px){
-   
-    .container{
-        font-size:14px ;
-        padding: 10px;
+ul li {
+  list-style: none;
+}
 
-    }
-    .container input{
-        width: 100%;
-    }
+ul li a {
+  color: #2d3436;
+  text-decoration: none;
+  font-weight: 500;
+}
 
+ul li a:hover {
+  color: #00b894;
+}
 
-    ul{
-        flex-direction: column;
-        gap:10px;
-    }
-    button{
-        width: 100%;
-    }
+main {
+  flex: 1;
+  padding: 30px 15px;
+}
+
+.container {
+  background: #ffffff;
+  max-width: 600px;
+  margin: auto;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.container h1 {
+  margin-bottom: 20px;
+  color: #2d3436;
+}
+
+form label {
+  font-size: 16px;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 10px;
+  color: #2d3436;
+}
+
+form input {
+  width: 80%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #dfe6e9;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+button {
+  background-color: #00b894;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #019875;
+}
+
+.results {
+  margin-top: 25px;
+  text-align: left;
+  background: #ecf0f1;
+  padding: 20px;
+  border-left: 4px solid #00b894;
+  border-radius: 10px;
+  word-wrap: break-word;
+}
+
+.results h2 {
+  margin-bottom: 10px;
+  color: #2d3436;
+}
+
+.results div::first-letter {
+  text-transform: uppercase;
+}
+
+footer {
+  background-color: #ffffff;
+  text-align: center;
+  color: #636e72;
+  padding: 15px 0;
+  font-size: 14px;
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.05);
+}
+
+@media (max-width: 600px) {
+    .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links li a {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+  }
 }
