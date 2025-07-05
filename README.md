@@ -16,11 +16,10 @@ Validato is a simple and responsive web application that allows users to validat
 
 ## 📸 Demo
 
-![App Screenshot](Screenshot (2593).png)
+![App Screenshot](screenshot1.png)
+![App Screenshot](screenshot2.png)
+![App Screenshot](screenshot3.png)
 
-![App Screenshot](Screenshot (2594).png)
-
-![App Screenshot](Screenshot (2595).png)
 
 ---
 
