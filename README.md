@@ -16,6 +16,12 @@ Validato is a simple and responsive web application that allows users to validat
 
 ## 📸 Demo
 
+![App Screenshot](Screenshot (2593).png)
+
+![App Screenshot](Screenshot (2594).png)
+
+![App Screenshot](Screenshot (2595).png)
+
 ---
 
 ## 🛠️ Tech Stack
@@ -33,7 +39,11 @@ Validato is a simple and responsive web application that allows users to validat
 ├── index.html
 ├── styles.css
 ├── script.js
+├── Screenshot (2593).png
+├── Screenshot (2594).png
+├── Screenshot (2595).png
 └── README.md
+
 
 ---
 
@@ -64,7 +74,7 @@ Pull requests are welcome! If you'd like to contribute, please fork the reposito
 🙋‍♂️ Author
 Shresth Veer Singh
 📧 shresthveer0408@gmail.com
-🔗 Shresth2929
+🔗 https://github.com/Shresth2929
 
 ---
 
