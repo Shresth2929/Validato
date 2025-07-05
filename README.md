@@ -56,6 +56,7 @@ Validato is a simple and responsive web application that allows users to validat
 ---
 
 📱 Responsive Design
+
 The website is mobile-friendly and adapts for small screen sizes using CSS media queries.
 
 ---
